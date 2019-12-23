@@ -1,0 +1,19 @@
+{
+    "name": "naixiaoxin/omnipay-paypal",
+    "require": {
+        "omnipay/common": "^3",
+        "php-http/guzzle6-adapter": "^2.0",
+        "ext-json": "*"
+    },
+    "authors": [
+        {
+            "name": "耐小心",
+            "email": "qiqizjl@qq.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Omnipay\\PaypalV2\\": "src/"
+        }
+    }
+}

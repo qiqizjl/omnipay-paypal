@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="487ab965-bc85-49e3-97d0-f288d7401803" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="PHP KMF Template" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1V6T7ZV2VDaGFKnW4t3lcIqxh3D" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Message/Rest" />
+      <recent name="$PROJECT_DIR$/src/Message" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="487ab965-bc85-49e3-97d0-f288d7401803" name="Default Changelist" comment="" />
+      <created>1576572378233</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576572378233</updated>
+      <workItem from="1576572382135" duration="3794000" />
+      <workItem from="1576675929277" duration="99000" />
+      <workItem from="1576736747676" duration="302000" />
+      <workItem from="1576737064407" duration="737000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="968" y="454" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1576736759679">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="968" y="454" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.2560.1440/2560.-182.1200.1920@0.0.2560.1440" timestamp="1576736759679" />
+    <state x="850" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1576575750088">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="850" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.2560.1440/2560.-182.1200.1920@0.0.2560.1440" timestamp="1576575750088" />
+    <state x="929" y="466" width="701" height="508" key="find.popup" timestamp="1576576523867">
+      <screen x="0" y="0" width="2560" height="1440" />
+    </state>
+    <state x="929" y="466" width="701" height="508" key="find.popup/0.0.2560.1440/2560.-182.1200.1920@0.0.2560.1440" timestamp="1576576523867" />
+  </component>
+</project>
