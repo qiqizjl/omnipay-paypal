@@ -31,9 +31,10 @@ class RefundRequest extends AbstractRequest
         if ($this->getAmount() > 0) {
             return array (
                 'amount'        => array (
-                    'currency' => $this->getCurrency(),
+                    'currency_code' => $this->getCurrency(),
                     'value'    => $this->getAmount(),
                 ),
+                "invoice_id"=>$this->getTransactionId(),
                 'note_to_payer' => $this->getDescription(),
             );
         } else {

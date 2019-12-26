@@ -233,7 +233,7 @@ class AuthorizeRequest extends AbstractRequest
                         'value'         => $this->getAmount(),
                         'currency_code' => $this->getCurrency(),
                     ),
-                    'invoice_number' => $this->getTransactionId(),
+                    'invoice_id' => $this->getTransactionId(),
                 ),
             ),
             'experience_profile_id' => $this->getExperienceProfileId(),
