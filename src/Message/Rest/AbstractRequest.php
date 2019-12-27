@@ -80,11 +80,9 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
                 ),
                 $body
             );
-            var_dump($body);
             // Empty response body should be parsed also as and empty array
             $body                = (string)$httpResponse->getBody()->getContents();
             $jsonToArrayResponse = !empty($body) ? json_decode($body, true) : array ();
-            var_dump($httpResponse);
             return $this->response = $this->createResponse($jsonToArrayResponse, $httpResponse->getStatusCode());
         } catch (\Exception $e) {
             throw new InvalidResponseException(

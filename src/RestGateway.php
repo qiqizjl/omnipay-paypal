@@ -11,11 +11,11 @@
 
 namespace Omnipay\PaypalV2;
 
-use http\Env\Response;
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Common\Message\ResponseInterface;
 use Omnipay\PaypalV2\Message\Rest\CompletePurchaseRequest;
+use Omnipay\PaypalV2\Message\Rest\FetchCaptureRequest;
 use Omnipay\PaypalV2\Message\Rest\FetchTransactionRequest;
 use Omnipay\PaypalV2\Message\Rest\PurchaseRequest;
 use Omnipay\PaypalV2\Message\Rest\RefundRequest;
@@ -161,6 +161,12 @@ class RestGateway extends AbstractGateway
     public function fetchTransaction(array $options): RequestInterface
     {
         return $this->createRequest(FetchTransactionRequest::class, $options);
+    }
+
+
+    public function fetchCapture(array $options): RequestInterface
+    {
+        return $this->createRequest(FetchCaptureRequest::class, $options);
     }
 
 }
