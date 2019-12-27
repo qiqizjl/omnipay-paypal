@@ -16,5 +16,5 @@
             "Omnipay\\PaypalV2\\": "src/"
         }
     },
-    "version":"0.0.4"
+    "version":"0.0.5"
 }
