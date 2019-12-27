@@ -15,5 +15,6 @@
         "psr-4": {
             "Omnipay\\PaypalV2\\": "src/"
         }
-    }
+    },
+    "version":"0.0.4"
 }
