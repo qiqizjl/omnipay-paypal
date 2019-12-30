@@ -11,7 +11,11 @@
 
 namespace Omnipay\PaypalV2;
 
+use GuzzleHttp\Psr7\Request;
+use Http\Adapter\Guzzle6\Client as GuzzleClient;
+use Http\Discovery\HttpClientDiscovery;
 use Omnipay\Common\AbstractGateway;
+use Omnipay\Common\Http\Client;
 use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Common\Message\ResponseInterface;
 use Omnipay\PaypalV2\Message\Rest\CompletePurchaseRequest;
@@ -39,6 +43,25 @@ class RestGateway extends AbstractGateway
             'secret'   => '',
             'testMode' => false,
         );
+    }
+
+    public function initialize(array $parameters = array ())
+    {
+        parent::initialize($parameters);
+        if (isset($parameters["http_proxy"])) {
+            $this->httpClient = $this->getClient($parameters["http_proxy"]);
+        }
+    }
+
+    protected function getClient($http_proxy)
+    {
+        $request = HttpClientDiscovery::find();
+        if ($request instanceof GuzzleClient) {
+            $request = GuzzleClient::createWithConfig([
+                "proxy" => $http_proxy,
+            ]);
+        }
+        return new Client($request);
     }
 
 
