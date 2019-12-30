@@ -48,8 +48,8 @@ class RestGateway extends AbstractGateway
     public function initialize(array $parameters = array ())
     {
         parent::initialize($parameters);
-        if (isset($parameters["http_proxy"])) {
-            $this->httpClient = $this->getClient($parameters["http_proxy"]);
+        if (isset($parameters["httpProxy"])) {
+            $this->httpClient = $this->getClient($parameters["httpProxy"]);
         }
     }
 
