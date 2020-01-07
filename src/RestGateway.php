@@ -20,6 +20,7 @@ use Omnipay\Common\Message\RequestInterface;
 use Omnipay\Common\Message\ResponseInterface;
 use Omnipay\PaypalV2\Message\Rest\CompletePurchaseRequest;
 use Omnipay\PaypalV2\Message\Rest\FetchCaptureRequest;
+use Omnipay\PaypalV2\Message\Rest\FetchTransactionListRequest;
 use Omnipay\PaypalV2\Message\Rest\FetchTransactionRequest;
 use Omnipay\PaypalV2\Message\Rest\PurchaseRequest;
 use Omnipay\PaypalV2\Message\Rest\RefundRequest;
@@ -190,6 +191,11 @@ class RestGateway extends AbstractGateway
     public function fetchCapture(array $options): RequestInterface
     {
         return $this->createRequest(FetchCaptureRequest::class, $options);
+    }
+
+    public function fetchTransactionList(array $options): RequestInterface
+    {
+        return $this->createRequest(FetchTransactionListRequest::class, $options);
     }
 
 }
