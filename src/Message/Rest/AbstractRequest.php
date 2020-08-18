@@ -77,6 +77,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
                     'Authorization'                 => 'Basic ' . $this->getToken(),
                     'Content-type'                  => 'application/json',
                     'PayPal-Partner-Attribution-Id' => $this->getReferrerCode(),
+                    'prefer'                        =>'return=representation'
                 ),
                 $body
             );
