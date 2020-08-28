@@ -11,7 +11,6 @@
 
 namespace Omnipay\PaypalV2\Message\Rest;
 
-
 /**
  * PayPal REST Authorize Request
  *
@@ -224,14 +223,20 @@ class AuthorizeRequest extends AbstractRequest
 {
     public function getData()
     {
-        $data  = array (
-            'intent'                => 'AUTHORIZE',
-            'purchase_units'        => array (
-                array (
-                    'description'    => $this->getDescription(),
-                    'amount'         => array (
-                        'value'         => $this->getAmount(),
+        $data = array(
+            'intent' => 'AUTHORIZE',
+            'purchase_units' => array(
+                array(
+                    'description' => $this->getDescription(),
+                    'amount' => array(
+                        'value' => $this->getAmount(),
                         'currency_code' => $this->getCurrency(),
+                        'breakdown' => array(
+                            'item_total' => array(
+                                'value' => $this->getAmount(),
+                                'currency_code' => $this->getCurrency(),
+                            ),
+                        ),
                     ),
                     'invoice_id' => $this->getTransactionId(),
                 ),
@@ -240,14 +245,14 @@ class AuthorizeRequest extends AbstractRequest
         );
         $items = $this->getItems();
         if ($items) {
-            $itemList = array ();
+            $itemList = array();
             foreach ($items as $n => $item) {
-                $itemList[] = array (
-                    'name'        => $item->getName(),
+                $itemList[] = array(
+                    'name' => $item->getName(),
                     'description' => $item->getDescription(),
-                    'quantity'    => $item->getQuantity(),
-                    "unit_amount" => array (
-                        "value"         => $item->getPrice(),
+                    'quantity' => $item->getQuantity(),
+                    "unit_amount" => array(
+                        "value" => $item->getPrice(),
                         'currency_code' => $this->getCurrency(),
                     ),
                 );
@@ -256,29 +261,29 @@ class AuthorizeRequest extends AbstractRequest
         }
         if ($this->getCardReference()) {
             $this->validate('amount');
-            $data['payer']['funding_instruments'][] = array (
-                'credit_card_token' => array (
+            $data['payer']['funding_instruments'][] = array(
+                'credit_card_token' => array(
                     'credit_card_id' => $this->getCardReference(),
                 ),
             );
         } elseif ($this->getCard()) {
             $this->validate('amount', 'card');
             $this->getCard()->validate();
-            $data['payer']['funding_instruments'][] = array (
-                'credit_card' => array (
-                    'number'          => $this->getCard()->getNumber(),
-                    'type'            => $this->getCard()->getBrand(),
-                    'expire_month'    => $this->getCard()->getExpiryMonth(),
-                    'expire_year'     => $this->getCard()->getExpiryYear(),
-                    'cvv2'            => $this->getCard()->getCvv(),
-                    'first_name'      => $this->getCard()->getFirstName(),
-                    'last_name'       => $this->getCard()->getLastName(),
-                    'billing_address' => array (
-                        'line1'        => $this->getCard()->getAddress1(),
+            $data['payer']['funding_instruments'][] = array(
+                'credit_card' => array(
+                    'number' => $this->getCard()->getNumber(),
+                    'type' => $this->getCard()->getBrand(),
+                    'expire_month' => $this->getCard()->getExpiryMonth(),
+                    'expire_year' => $this->getCard()->getExpiryYear(),
+                    'cvv2' => $this->getCard()->getCvv(),
+                    'first_name' => $this->getCard()->getFirstName(),
+                    'last_name' => $this->getCard()->getLastName(),
+                    'billing_address' => array(
+                        'line1' => $this->getCard()->getAddress1(),
                         //'line2' => $this->getCard()->getAddress2(),
-                        'city'         => $this->getCard()->getCity(),
-                        'state'        => $this->getCard()->getState(),
-                        'postal_code'  => $this->getCard()->getPostcode(),
+                        'city' => $this->getCard()->getCity(),
+                        'state' => $this->getCard()->getState(),
+                        'postal_code' => $this->getCard()->getPostcode(),
                         'country_code' => strtoupper($this->getCard()->getCountry()),
                     ),
                 ),
@@ -291,7 +296,7 @@ class AuthorizeRequest extends AbstractRequest
             }
         } else {
             $this->validate('amount', 'returnUrl', 'cancelUrl');
-            $data['application_context']     = array (
+            $data['application_context'] = array(
                 'return_url' => $this->getReturnUrl(),
                 'cancel_url' => $this->getCancelUrl(),
             );
@@ -330,7 +335,7 @@ class AuthorizeRequest extends AbstractRequest
      */
     public function getDescription()
     {
-        $id   = $this->getTransactionId();
+        $id = $this->getTransactionId();
         $desc = parent::getDescription();
         if (empty($id)) {
             return $desc;
