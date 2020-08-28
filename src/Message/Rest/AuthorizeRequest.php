@@ -326,27 +326,6 @@ class AuthorizeRequest extends AbstractRequest
     }
 
     /**
-     * Get transaction description.
-     *
-     * The REST API does not currently have support for passing an invoice number
-     * or transaction ID.
-     *
-     * @return string
-     */
-    public function getDescription()
-    {
-        $id = $this->getTransactionId();
-        $desc = parent::getDescription();
-        if (empty($id)) {
-            return $desc;
-        } elseif (empty($desc)) {
-            return $id;
-        } else {
-            return "$id : $desc";
-        }
-    }
-
-    /**
      * Get transaction endpoint.
      *
      * Authorization of payments is done using the /payment resource.
