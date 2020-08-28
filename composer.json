@@ -1,5 +1,5 @@
 {
-    "name": "rf1705/omnipay-paypal",
+    "name": "naixiaoxin/omnipay-paypal",
     "require": {
         "omnipay/common": "^3",
         "php-http/guzzle6-adapter": "^2.0",
