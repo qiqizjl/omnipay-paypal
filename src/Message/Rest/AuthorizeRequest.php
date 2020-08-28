@@ -297,6 +297,7 @@ class AuthorizeRequest extends AbstractRequest
         } else {
             $this->validate('amount', 'returnUrl', 'cancelUrl');
             $data['application_context'] = array(
+                'brand_name' => $this->getBrandName(),
                 'return_url' => $this->getReturnUrl(),
                 'cancel_url' => $this->getCancelUrl(),
             );

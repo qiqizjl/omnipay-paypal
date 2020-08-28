@@ -5,16 +5,14 @@
         "php-http/guzzle6-adapter": "^2.0",
         "ext-json": "*"
     },
-    "authors": [
-        {
-            "name": "耐小心",
-            "email": "qiqizjl@qq.com"
-        }
-    ],
+    "authors": [{
+        "name": "耐小心",
+        "email": "qiqizjl@qq.com"
+    }],
     "autoload": {
         "psr-4": {
             "Omnipay\\PaypalV2\\": "src/"
         }
     },
-    "version":"0.1.0"
+    "version": "0.1.2"
 }
