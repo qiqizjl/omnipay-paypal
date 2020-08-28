@@ -6,9 +6,14 @@
         "ext-json": "*"
     },
     "authors": [{
-        "name": "耐小心",
-        "email": "qiqizjl@qq.com"
-    }],
+            "name": "耐小心",
+            "email": "qiqizjl@qq.com"
+        },
+        {
+            "name": "Ronald Fiering",
+            "email": "rfiering@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Omnipay\\PaypalV2\\": "src/"
