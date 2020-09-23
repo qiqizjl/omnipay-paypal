@@ -133,6 +133,18 @@ class RestGateway extends AbstractGateway
     }
 
     /**
+     * Set Brand Name.
+     *
+     *
+     * @param string $value
+     * @return RestGateway provides a fluent interface
+     */
+    public function setBrandName($value)
+    {
+        return $this->setParameter('brandName', $value);
+    }
+
+    /**
      * Get OAuth 2.0 access token.
      *
      * @param bool $createIfNeeded [optional] - If there is not an active token present, should we create one?

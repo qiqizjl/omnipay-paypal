@@ -40,6 +40,15 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
         return $this->setParameter('token', $value);
     }
 
+    public function setBrandName($value)
+    {
+        return $this->setParameter('brandName', $value);
+    }
+
+    protected function getBrandName()
+    {
+        return $this->getParameter('brandName');
+    }
 
 
     /**
