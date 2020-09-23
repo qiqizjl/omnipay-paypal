@@ -1,17 +1,14 @@
 {
-    "name": "rf1705/omnipay-paypal",
+    "name": "naixiaoxin/omnipay-paypal",
     "require": {
         "omnipay/common": "^3",
         "php-http/guzzle6-adapter": "^2.0",
         "ext-json": "*"
     },
-    "authors": [{
+    "authors": [
+        {
             "name": "耐小心",
             "email": "qiqizjl@qq.com"
-        },
-        {
-            "name": "Ronald Fiering",
-            "email": "rfiering@gmail.com"
         }
     ],
     "autoload": {
@@ -19,5 +16,5 @@
             "Omnipay\\PaypalV2\\": "src/"
         }
     },
-    "version": "0.1.2"
+    "version":"0.0.8"
 }
