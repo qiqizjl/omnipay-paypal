@@ -12,7 +12,7 @@
 namespace Omnipay\PaypalV2;
 
 use GuzzleHttp\Psr7\Request;
-use Http\Adapter\Guzzle6\Client as GuzzleClient;
+use Http\Adapter\Guzzle7\Client as GuzzleClient;
 use Http\Discovery\HttpClientDiscovery;
 use Omnipay\Common\AbstractGateway;
 use Omnipay\Common\Http\Client;
